@@ -32,11 +32,7 @@ namespace SalesWPFApp
 
         private void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PRN221_asg1Context>(options =>
-            {
-                options.UseSqlServer("server=WiS;database=PRN221_asg1;user=sa;password=123456;TrustServerCertificate=True");
-            }
-            );
+            services.AddScoped<PRN221_asg1Context>();
 
 
             services.AddAutoMapper(typeof(MappingProfile));
